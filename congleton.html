@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
 
-  <body onload="init();">
+  <body>
     <div id="map"></div>
 
     <div id="frame">
@@ -32,6 +32,19 @@
 
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/polymaps.min.js"></script>
-    <script src="assets/js/congleton.js"></script>
+    <script src="assets/js/all-locs.js"></script>
+    <script type="text/javascript">
+      $(() => {
+        const place = {
+          city: "Congleton",
+          region: "United Kingdom",
+          lat: 53.1664,
+          lon: -2.2195,
+          zoom: 15
+        };
+
+        plotMap(place);
+      });
+    </script>
   </body>
 </html>
